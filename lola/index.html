@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de BodyPincer</title>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Agendamento  Lola BodyPincer</h1>
+  </header>
+  <main>
+    <form id="appointment-form">
+      <label for="client-name">Nome do Cliente:</label>
+      <input type="text" id="client-name" name="client-name" required>
+      
+      <label for="client-phone">Telefone de Contato:</label>
+      <input type="tel" id="client-phone" name="client-phone" required>
+      
+      <label for="piercing-type">Tipo de Perfuração:</label>
+      <select id="piercing-type" name="piercing-type">
+        <option value="Nariz">Nariz</option>
+        <option value="Língua">Língua</option>
+        <option value="Orelha">Orelha</option>
+      </select>
+      
+      <label for="jewelry">Joia:</label>
+      <div class="jewelry-options">
+        <label class="jewelry-option">
+          <input type="radio" name="jewelry" value="septo">
+          <img src="./image/joia 1.jpg" alt="">
+          <span></span>
+        </label>
+        <label class="jewelry-option">
+          <input type="radio" name="jewelry" value="targus">
+          <img src="./image/boca.png" alt="">
+          <span></span>
+        </label>
+        <label class="jewelry-option">
+            <input type="radio" name="jewelry" value="targus">
+            <img src="./image/ouvido.png" alt="">
+            <span></span>
+          </label>
+          <label class="jewelry-option">
+            <input type="radio" name="jewelry" value="targus">
+            <img src="./image/peito.png" alt="">
+            <span></span>
+          </label>
+        <!-- Mais opções de joias aqui -->
+      </div>
+      
+      <label for="appointment-date">Selecione a Data e Hora:</label>
+      <input type="datetime-local" id="appointment-date" name="appointment-date" required>
+      
+      <button type="submit">Agendar</button>
+    </form>
+
+    <section id="calendar-section">
+      <h2>Calendário de Agendamentos</h2>
+      <div id="calendar"></div>
+    </section>
+  </main>
+  <script src="calendar.js"></script>
+</body>
+</html>
